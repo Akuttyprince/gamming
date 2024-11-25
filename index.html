@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Toggle Sidebar Visibility
+      function toggleMenu() {
+        const menu = document.getElementById("sidebar");
+        menu.classList.toggle("hidden");
+      }
+    </script>
+  </head>
+
+  <body class="bg-gray-900 text-gray-200 scroll-smooth">
+    <!-- Navbar -->
+    <header
+      class="flex items-center justify-between p-4 fixed top-0 w-full bg-blue-300 text-white z-50"
+    >
+      <h1 class="text-lg font-bold">Day Tech</h1>
+      <div class="flex items-center space-x-4">
+        <!-- Logo -->
+        <img
+          id="logo"
+          src="img/logo.jpg"
+          alt="Logo"
+          class="w-10 h-10 rounded-full transition-transform"
+        />
+        <!-- Menu Button -->
+        <button onclick="toggleMenu()" class="p-2 bg-gray-700 rounded-lg">
+          <div class="w-6 h-[2px] bg-white mb-1"></div>
+          <div class="w-6 h-[2px] bg-white mb-1"></div>
+          <div class="w-6 h-[2px] bg-white"></div>
+        </button>
+      </div>
+    </header>
+
+    <!-- Sidebar Menu -->
+    <div
+      id="menu"
+      class="fixed top-15 right-0 w-64 h-full bg-gray-900 text-white transform -translate-y-full transition-transform z-40 flex flex-col space-y-6 p-8"
+    >
+    <img
+    id="logo"
+    src="img/logo.jpg"
+    alt="Logo"
+    class="w-20 h-20 item-center b-3 rounded-full transition-transform"
+  />
+      <ul>
+        <li><a href="#home" class="hover:text-blue-400 block">Home</a></li>
+        <li>
+          <a href="#innovators" class="hover:text-blue-400 block">Innovators</a>
+        </li>
+        <li>
+          <a href="#project" class="hover:text-blue-400 block">Project</a>
+        </li>
+        <li>
+          <a href="#achievements" class="hover:text-blue-400 block"
+            >Achievements</a
+          >
+        </li>
+        <li>
+          <a href="#aboutus" class="hover:text-blue-400 block">About Us</a>
+        </li>
+        <li>
+          <a href="#contactus" class="hover:text-blue-400 block">Contact Us</a>
+        </li>
+        <li>
+          <!-- Social Media Links -->
+          <div class="flex justify-center space-x-4 mt-6">
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              class="text-2xl hover:text-pink-500"
+              >📷</a
+            >
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              class="text-2xl hover:text-blue-500"
+              >📘</a
+            >
+            <a
+              href="https://www.twitter.com"
+              target="_blank"
+              class="text-2xl hover:text-blue-400"
+              >🐦</a
+            >
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              class="text-2xl hover:text-blue-600"
+              >🔗</a
+            >
+            <a
+              href="https://www.github.com"
+              target="_blank"
+              class="text-2xl hover:text-gray-400"
+              >🐱</a
+            >
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      const menu = document.getElementById("menu");
+
+      function toggleMenu() {
+        if (menu.classList.contains("-translate-y-full")) {
+          menu.classList.remove("-translate-y-full"); // Show menu
+        } else {
+          menu.classList.add("-translate-y-full"); // Hide menu
+        }
+      }
+    </script>
+
+    <!-- Main Section -->
+    <section
+      id="home"
+      class="relative grid place-items-center text-center mt-16 px-6 bg-gray-800 text-gray-200"
+    >
+      <!-- Background Image -->
+      <div class="absolute inset-0 bg-cover bg-center -z-10"></div>
+      <h2 class="text-3xl font-semibold mt-8 col-span-full">
+        “Strive not to be a success, but rather to be of value.”
+      </h2>
+      <button
+        onclick="scrollToContactUs()"
+        class="mt-4 px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-500 col-span-full text-lg"
+      >
+        Contact Us
+      </button>
+
+      <script>
+        function scrollToContactUs() {
+          document
+            .getElementById("contactus")
+            .scrollIntoView({ behavior: "smooth" });
+        }
+      </script>
+
+      <!-- Info Section -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16 max-w-4xl">
+        <h3 class="text-2xl font-bold col-span-full">What we Do?</h3>
+        <div class="flex flex-col items-center">
+          <span class="text-4xl">🎮</span>
+          <p class="mt-2 text-gray-300 text-lg">
+            We build any game development you need. We have strong teams of game
+            development that can do your needs.
+          </p>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-4xl">🖥️</span>
+          <p class="mt-2 text-gray-300 text-lg">
+            We also specialize in innovative software and cutting-edge
+            technologies for businesses.
+          </p>
+        </div>
+      </div>
+      <br /><br />
+      <span class="text-4xl">🌍</span>
+      <p class="mt-2 text-gray-300 text-lg">
+        We build any web application you need personal biog? company profile?
+        E-commerce? or any specificfuctionalities. We have good innovators that
+        can follow your stack and needs.
+      </p>
+      <br /><br />
+      <p class="mt-2 text-gray-300 text-lg">
+        All things are designed we try to elevate your idea with great UI/UX
+        design, suited to your taste. We have a creativity innovators.
+      </p>
+      <br /><br />
+    </section>
+    <br /><br />
+    <!--innovators-->
+    <style>
+      /* Animation for the cards */
+      .hidden-card {
+        transform: translateY(20px) scale(0.9);
+        opacity: 0.7;
+        transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+      }
+
+      :hover.visible-card {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+
+      .zoom-animation {
+        animation: zoom-in-out 4s infinite;
+      }
+
+      @keyframes zoom-in-out {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+      }
+    </style>
+
+    <!-- Section Heading -->
+    <div id="innovators" class="text-center mt-10">
+      <h1 class="text-4xl font-bold text-white">Innovators</h1>
+      <p class="text-gray-400 mt-2">Meet our talented team of innovators!</p>
+    </div>
+
+    <!-- Innovators Section -->
+    <div id="innovators" class="space-y-8 mt-10 max-w-4xl mx-auto">
+      <!-- Repeat for additional persons -->
+      <div
+        class="flex items-center bg-gray-800 p-6 rounded-lg shadow-lg hidden-card"
+      >
+        <img
+          src="img/1713277408578.jpg"
+          alt="Person 2"
+          class="w-24 h-24 rounded-full shadow-md zoom-animation"
+        />
+        <div class="ml-6 bg-gray-100 p-4 rounded-lg w-full">
+          <h2 class="text-lg font-bold text-gray-900">YUVARAJ S</h2>
+          <p class="text-gray-600">FRONTEND DEVELOPER</p>
+          <p class="text-gray-600">yuvarajpro213@gmail.com</p>
+          <p class="text-gray-600">+91 7358271217</p>
+          <div class="flex space-x-4 mt-2">
+            <a href="facebook.com" class="text-blue-500 text-xl">📘</a>
+            <a href="instagram.com/_yuva_rajj_" class="text-pink-500 text-xl"
+              >📷</a
+            >
+            <a href="tiwwer.com" class="text-blue-400 text-xl">🐦</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more cards for remaining persons -->
+      <!-- Person 3 -->
+      <div
+        class="flex items-center bg-gray-800 p-6 rounded-lg shadow-lg hidden-card"
+      >
+        <img
+          src="https://via.placeholder.com/100"
+          alt="Person 3"
+          class="w-24 h-24 rounded-full shadow-md zoom-animation"
+        />
+        <div class="ml-6 bg-gray-100 p-4 rounded-lg w-full">
+          <h2 class="text-lg font-bold text-gray-900">Michael Brown</h2>
+          <p class="text-gray-600">Data Scientist</p>
+          <p class="text-gray-600">Email: michael.brown@example.com</p>
+          <p class="text-gray-600">Phone: +1-456-789-1234</p>
+          <div class="flex space-x-4 mt-2">
+            <a href="#" class="text-blue-500 text-xl">📘</a>
+            <a href="#" class="text-pink-500 text-xl">📷</a>
+            <a href="#" class="text-blue-400 text-xl">🐦</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Person 4 -->
+      <div
+        class="flex items-center bg-gray-800 p-6 rounded-lg shadow-lg hidden-card"
+      >
+        <img
+          src="https://via.placeholder.com/100"
+          alt="Person 4"
+          class="w-24 h-24 rounded-full shadow-md zoom-animation"
+        />
+        <div class="ml-6 bg-gray-100 p-4 rounded-lg w-full">
+          <h2 class="text-lg font-bold text-gray-900">Sarah Wilson</h2>
+          <p class="text-gray-600">UI/UX Designer</p>
+          <p class="text-gray-600">Email: sarah.wilson@example.com</p>
+          <p class="text-gray-600">Phone: +1-321-654-9870</p>
+          <div class="flex space-x-4 mt-2">
+            <a href="#" class="text-blue-500 text-xl">📘</a>
+            <a href="#" class="text-pink-500 text-xl">📷</a>
+            <a href="#" class="text-blue-400 text-xl">🐦</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Person 5 -->
+      <div
+        class="flex items-center bg-gray-800 p-6 rounded-lg shadow-lg hidden-card"
+      >
+        <img
+          src="https://via.placeholder.com/100"
+          alt="Person 5"
+          class="w-24 h-24 rounded-full shadow-md zoom-animation"
+        />
+        <div class="ml-6 bg-gray-100 p-4 rounded-lg w-full">
+          <h2 class="text-lg font-bold text-gray-900">Emma Davis</h2>
+          <p class="text-gray-600">Blockchain Developer</p>
+          <p class="text-gray-600">Email: emma.davis@example.com</p>
+          <p class="text-gray-600">Phone: +1-789-123-4567</p>
+          <div class="flex space-x-4 mt-2">
+            <a href="#" class="text-blue-500 text-xl">📘</a>
+            <a href="#" class="text-pink-500 text-xl">📷</a>
+            <a href="#" class="text-blue-400 text-xl">🐦</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Scroll animation with Intersection Observer
+      const cards = document.querySelectorAll(".hidden-card");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible-card");
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
+
+      // Observe all cards
+      cards.forEach((card) => observer.observe(card));
+    </script>
+    <!--Courses-->
+
+    <div id="project" class="mt-10 space-y-4 place-items-center">
+      <h1 class="text-6xl font-bold col-span-full">projects</h1>
+      <br /><br />
+      <button
+        class="w-80 block py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-300"
+      >
+        GAMING
+      </button>
+      <button
+        class="w-80 block py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-300"
+      >
+        FULL STACK DEVELOPMENT
+      </button>
+      <button
+        class="w-80 block py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-300"
+      >
+        E-COMMERCE
+      </button>
+      <button
+        class="w-80 block py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-300"
+      >
+        BLOCKCHAIN
+      </button>
+    </div>
+    <br /><br />
+
+    <!-- form tag-->
+    <div
+      id="contactus"
+      class="w-full max-w-md mx-auto mt-10 p-6 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white rounded-lg shadow-lg relative border-4 border-transparent"
+    >
+      <div class="inset-0 rounded-lg border-4 border-transparent"></div>
+      <form
+        id="contactForm"
+        class="bg-white rounded-lg text-gray-800 shadow-md space-y-4"
+      >
+        <h2 class="text-xl font-bold text-center text-gray-700">Contact Us</h2>
+        <!-- Form Fields -->
+        <!-- Name -->
+        <div>
+          <label for="name" class="block font-semibold mb-1">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+          />
+        </div>
+
+        <!-- Phone -->
+        <div>
+          <label for="phone" class="block font-semibold mb-1">Phone</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+          />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="block font-semibold mb-1">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+          />
+        </div>
+        <!--text-->
+        <div>
+          <label for="text" class="block font-semibold mb-1"
+            >Tell your message</label
+          >
+          <input
+            type="text"
+            id="text"
+            name="text"
+            class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+          />
+        </div>
+        <button
+          type="button"
+          onclick="handleSubmit()"
+          class="w-full bg-purple-500 text-white py-2 rounded-lg hover:bg-purple-600"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <script>
+      emailjs.init("bgylUmCEBP8l9l6-V"); // Your EmailJS User ID
+
+      function handleSubmit() {
+        // Get form values
+        const name = document.getElementById("name").value;
+        const phone = document.getElementById("phone").value;
+        const email = document.getElementById("email").value;
+        const text = document.getElementById("text").value;
+
+        // Validation
+        if (!name || !phone || !email || !text) {
+          alert("Please fill in all fields!");
+          return;
+        }
+
+        // Prepare data for EmailJS
+        const formData = {
+          name: name,
+          phone: phone,
+          email: email,
+          text: text,
+        };
+
+        // Send data using EmailJS
+        emailjs
+          .send("service_vxvbwdi", "gamming_friends", formData)
+          .then((response) => {
+            console.log("Success:", response.status, response.text);
+            alert("Sent successfully!");
+          })
+          .catch((error) => {
+            console.error("Failed to send:", error);
+            alert("Failed to send. Please try again.");
+          });
+      }
+    </script>
+
+    <style>
+      /* Glowing LED-style border animation */
+      .animate-border-gradient {
+        background: conic-gradient(
+          from 0deg,
+          #ff7eb3,
+          #ffa500,
+          #ffeb3b,
+          #00e676,
+          #6200ea,
+          #ff7eb3
+        );
+        animation: border-rotate 3s linear infinite;
+        -webkit-mask: linear-gradient(#000 0 0) padding-box,
+          linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+      }
+
+      @keyframes border-rotate {
+        to {
+          transform: rotate(1turn);
+        }
+      }
+    </style>
+  </body>
+</html>
